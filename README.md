@@ -36,7 +36,7 @@ npm run db:seed -- --org org_XXXXXXXX --name "Main Street Café"
 
 ## Deploying to Vercel
 
-Import the repo in Vercel, add the same environment variables, and deploy. Run `npm run db:migrate` against the production database (locally with the production `DATABASE_URL`, or as a build step).
+Import the repo in Vercel and connect the Neon and Clerk integrations. Make sure both integrations' variables are set for **Production** (and Preview, if you want working previews). Each deploy runs `npm run vercel-build`, which applies pending migrations to that environment's database before building.
 
 ## Scripts
 
